@@ -6,23 +6,23 @@ Cacoo4J is a Cacoo API binding library for the Java language licensed under Apac
 
 ###Authentication
 
-* API Key
+####API Key
 
     Cacoo c = new Cacoo("[API Key]");
 
- You can make an API key here.
- https://cacoo.com/profile/api
+You can make an API key here.
+https://cacoo.com/profile/api
 
-* OAuth
+####OAuth
 
     Cacoo c = new Cacoo("[consumerKey]", "[consumerSecret]");
     AccessToken accessToken = new AccessToken("[token]", "[tokenSecret]");
     c.setAccessToken(accessToken);
 
-  You can register applications here.
-  https://cacoo.com/profile/apps
+You can register applications here.
+https://cacoo.com/profile/apps
 
-  You can get your Access Token from the following code.(exec console)
+You can get your Access Token from the following code.(exec console)
 
     AccessToken accessToken = c.retrieve();
 
