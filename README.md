@@ -2,6 +2,10 @@
 
 Cacoo4J is a Cacoo API binding library for the Java language licensed under Apache License 2.0.
 
+##Download
+
+https://dl.dropbox.com/s/vjtqwnbkerrxqzi/cacoo4j.zip
+
 ##Usage
 
 ###Authentication
