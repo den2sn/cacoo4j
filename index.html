@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cacoo4j by den2sn</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Cacoo4j</h1>
+        <p>A Java library for the Cacoo API</p>
+        <p class="view"><a href="https://github.com/den2sn/cacoo4j">View the Project on GitHub <small>den2sn/cacoo4j</small></a></p>
+        <ul>
+          <li><a href="https://github.com/den2sn/cacoo4j/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/den2sn/cacoo4j/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/den2sn/cacoo4j">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="cacoo4j" class="anchor" href="#cacoo4j"><span class="octicon octicon-link"></span></a>Cacoo4J</h1>
+
+<p>Cacoo4J is a Cacoo API binding library for the Java language licensed under Apache License 2.0.</p>
+
+<h2>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<p><a href="https://dl.dropbox.com/s/vjtqwnbkerrxqzi/cacoo4j.zip">https://dl.dropbox.com/s/vjtqwnbkerrxqzi/cacoo4j.zip</a></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="authentication" class="anchor" href="#authentication"><span class="octicon octicon-link"></span></a>Authentication</h3>
+
+<h4>
+<a name="api-key" class="anchor" href="#api-key"><span class="octicon octicon-link"></span></a>API Key</h4>
+
+<pre><code>Cacoo c = new Cacoo("[API Key]");
+</code></pre>
+
+<p>You can make an API key here.
+<a href="https://cacoo.com/profile/api">https://cacoo.com/profile/api</a></p>
+
+<h4>
+<a name="oauth" class="anchor" href="#oauth"><span class="octicon octicon-link"></span></a>OAuth</h4>
+
+<pre><code>Cacoo c = new Cacoo("[consumerKey]", "[consumerSecret]");
+AccessToken accessToken = new AccessToken("[token]", "[tokenSecret]");
+c.setAccessToken(accessToken);
+</code></pre>
+
+<p>You can register applications here.
+<a href="https://cacoo.com/profile/apps">https://cacoo.com/profile/apps</a></p>
+
+<p>You can get your Access Token from the following code.(exec console)</p>
+
+<pre><code>AccessToken accessToken = c.retrieve();
+</code></pre>
+
+<h3>
+<a name="get-diagrams" class="anchor" href="#get-diagrams"><span class="octicon octicon-link"></span></a>Get Diagrams</h3>
+
+<p>Returns a list of your diagrams</p>
+
+<pre><code>Diagrams diagrams = c.getDiagrams();
+for (Diagram diagram : diagrams.getResult()) {
+    //...
+}
+</code></pre>
+
+<h3>
+<a name="get-diagram" class="anchor" href="#get-diagram"><span class="octicon octicon-link"></span></a>Get Diagram</h3>
+
+<pre><code>Diagram diagram = c.getDiagram("[diagramId]");
+</code></pre>
+
+<h3>
+<a name="output-image" class="anchor" href="#output-image"><span class="octicon octicon-link"></span></a>Output Image</h3>
+
+<pre><code>Diagram diagram = c.getDiagram("[diagramId]");
+FileOutputStream out = new FileOutputStream("/Users/username/Desktop/diagram.png");
+c.outputImage(diagram, out);
+out.close();
+</code></pre>
+
+<h3>
+<a name="get-chat-messages" class="anchor" href="#get-chat-messages"><span class="octicon octicon-link"></span></a>Get Chat Messages</h3>
+
+<pre><code>Messages messages = c.getChatMessages("[diagramId]");
+</code></pre>
+
+<h3>
+<a name="get-folders" class="anchor" href="#get-folders"><span class="octicon octicon-link"></span></a>Get Folders</h3>
+
+<pre><code>Folders folders = c.getFolders();
+for (Folder folder : folders.getResult()) {
+    //...
+}
+</code></pre>
+
+<h3>
+<a name="get-user" class="anchor" href="#get-user"><span class="octicon octicon-link"></span></a>Get User</h3>
+
+<pre><code>CacooUser user = c.getUser("[username]");
+</code></pre>
+
+<h3>
+<a name="get-account" class="anchor" href="#get-account"><span class="octicon octicon-link"></span></a>Get Account</h3>
+
+<pre><code>CacooUser user = c.getAccount();
+</code></pre>
+
+<h3>
+<a name="get-license" class="anchor" href="#get-license"><span class="octicon octicon-link"></span></a>Get License</h3>
+
+<pre><code>License license = c.getLicense();
+</code></pre>
+
+<h3>
+<a name="create-diagram" class="anchor" href="#create-diagram"><span class="octicon octicon-link"></span></a>Create Diagram</h3>
+
+<pre><code>Diagram diagram = c.createDiagram(new CreateDiagramRequest("[titlename]"));
+</code></pre>
+
+<h3>
+<a name="copy-diagram" class="anchor" href="#copy-diagram"><span class="octicon octicon-link"></span></a>Copy Diagram</h3>
+
+<pre><code>Diagram diagram = c.copyDiagram("[diagramId]");
+</code></pre>
+
+<h3>
+<a name="delete-diagram" class="anchor" href="#delete-diagram"><span class="octicon octicon-link"></span></a>Delete Diagram</h3>
+
+<pre><code>c.deleteDiagram("[diagramId]");
+</code></pre>
+
+<h3>
+<a name="post-comment" class="anchor" href="#post-comment"><span class="octicon octicon-link"></span></a>Post Comment</h3>
+
+<pre><code>c.postComment("[diagramId]", "[comment]");
+</code></pre>
+
+<h3>
+<a name="get-diagram-contents" class="anchor" href="#get-diagram-contents"><span class="octicon octicon-link"></span></a>Get Diagram Contents</h3>
+
+<pre><code>String contents = c.getDiagramContents("[diagramId]");
+</code></pre>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/den2sn">den2sn</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
