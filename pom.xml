@@ -20,8 +20,18 @@
     </licenses>
 
     <scm>
+        <connection>scm:git:git@github.com:den2sn/cacoo4j.git</connection>
+        <developerConnection>scm:git:git@github.com:den2sn/cacoo4j.git</developerConnection>
         <url>https://github.com/den2sn/cacoo4j</url>
     </scm>
+
+    <developers>
+        <developer>
+            <id>den2sn</id>
+            <name>Masuji Katoda</name>
+            <email>den2sn@gmail.com</email>
+        </developer>
+    </developers>
 
     <build>
         <plugins>
