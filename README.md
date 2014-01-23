@@ -14,7 +14,7 @@ Cacoo4J is a Cacoo API binding library for the Java language licensed under Apac
 
 ###Download
 
-https://github.com/den2sn/cacoo4j/releases/1.0.0/932/cacoo4j.zip
+https://github.com/den2sn/cacoo4j/releases/download/1.0.1/cacoo4j.zip
 
 ##Usage
 
