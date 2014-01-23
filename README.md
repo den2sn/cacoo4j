@@ -9,7 +9,7 @@ Cacoo4J is a Cacoo API binding library for the Java language licensed under Apac
     <dependency>
         <groupId>org.cacoo4j</groupId>
         <artifactId>cacoo4j</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 
 ###Download
