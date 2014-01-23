@@ -116,11 +116,31 @@ public class Cacoo {
         return getDiagrams(0, 0);
     }
     public Diagrams getDiagrams(int limit, int offset) {
+        return getDiagrams(limit, offset, null, null, null, 0, null);
+    }
+    /**
+     * Returns a list of your diagrams.
+     * 
+     * @param limit Limit
+     * @param offset Offset
+     * @param type Type of diagrams (all, own, shared, stencil, template, recyclebin)
+     * @param sortOn Order by (updated, title, owner, folder)
+     * @param sortType Order type (desc, asc)
+     * @param folderId Folder ID
+     * @param keyword Search keyword
+     * @return 
+     */
+    public Diagrams getDiagrams(int limit, int offset, String type, String sortOn, String sortType, int folderId, String keyword) {
         try {
             Map<String, String> params = new HashMap<String, String>();
             if (apiKey != null) params.put("apiKey", apiKey);
             if (limit != 0) params.put("limit", String.valueOf(limit));
             if (offset != 0) params.put("offset", String.valueOf(offset));
+            if (type != null) params.put("type", type);
+            if (sortOn != null) params.put("sortOn", sortOn);
+            if (sortType != null) params.put("sortType", sortType);
+            if (folderId != 0) params.put("folderId", String.valueOf(folderId));
+            if (keyword != null) params.put("keyword", keyword);
             String query = HttpUtil.createQueryString(params);
 
             DiagramsHandler handler = new DiagramsHandler();
