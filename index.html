@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Cacoo4j : A Java library for the Cacoo API" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Cacoo4j : A Java library for the Cacoo API">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -32,15 +32,15 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="cacoo4j" class="anchor" href="#cacoo4j"><span class="octicon octicon-link"></span></a>Cacoo4J</h1>
+<a id="cacoo4j" class="anchor" href="#cacoo4j" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cacoo4J</h1>
 
 <p>Cacoo4J is a Cacoo API binding library for the Java language licensed under Apache License 2.0.</p>
 
 <h2>
-<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
 
 <h3>
-<a name="maven" class="anchor" href="#maven"><span class="octicon octicon-link"></span></a>Maven</h3>
+<a id="maven" class="anchor" href="#maven" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maven</h3>
 
 <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;org.cacoo4j&lt;/groupId&gt;
@@ -50,18 +50,18 @@
 </code></pre>
 
 <h3>
-<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h3>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h3>
 
 <p><a href="https://github.com/den2sn/cacoo4j/releases/download/1.0.1/cacoo4j.zip">https://github.com/den2sn/cacoo4j/releases/download/1.0.1/cacoo4j.zip</a></p>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <h3>
-<a name="authentication" class="anchor" href="#authentication"><span class="octicon octicon-link"></span></a>Authentication</h3>
+<a id="authentication" class="anchor" href="#authentication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication</h3>
 
 <h4>
-<a name="api-key" class="anchor" href="#api-key"><span class="octicon octicon-link"></span></a>API Key</h4>
+<a id="api-key" class="anchor" href="#api-key" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Key</h4>
 
 <pre><code>Cacoo c = new Cacoo("[API Key]");
 </code></pre>
@@ -70,7 +70,7 @@
 <a href="https://cacoo.com/profile/api">https://cacoo.com/profile/api</a></p>
 
 <h4>
-<a name="oauth" class="anchor" href="#oauth"><span class="octicon octicon-link"></span></a>OAuth</h4>
+<a id="oauth" class="anchor" href="#oauth" aria-hidden="true"><span class="octicon octicon-link"></span></a>OAuth</h4>
 
 <pre><code>Cacoo c = new Cacoo("[consumerKey]", "[consumerSecret]");
 AccessToken accessToken = new AccessToken("[token]", "[tokenSecret]");
@@ -86,7 +86,7 @@ c.setAccessToken(accessToken);
 </code></pre>
 
 <h3>
-<a name="get-diagrams" class="anchor" href="#get-diagrams"><span class="octicon octicon-link"></span></a>Get Diagrams</h3>
+<a id="get-diagrams" class="anchor" href="#get-diagrams" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Diagrams</h3>
 
 <p>Returns a list of your diagrams</p>
 
@@ -97,13 +97,13 @@ for (Diagram diagram : diagrams.getResult()) {
 </code></pre>
 
 <h3>
-<a name="get-diagram" class="anchor" href="#get-diagram"><span class="octicon octicon-link"></span></a>Get Diagram</h3>
+<a id="get-diagram" class="anchor" href="#get-diagram" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Diagram</h3>
 
 <pre><code>Diagram diagram = c.getDiagram("[diagramId]");
 </code></pre>
 
 <h3>
-<a name="output-image" class="anchor" href="#output-image"><span class="octicon octicon-link"></span></a>Output Image</h3>
+<a id="output-image" class="anchor" href="#output-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Output Image</h3>
 
 <pre><code>Diagram diagram = c.getDiagram("[diagramId]");
 FileOutputStream out = new FileOutputStream("/Users/username/Desktop/diagram.png");
@@ -112,13 +112,13 @@ out.close();
 </code></pre>
 
 <h3>
-<a name="get-chat-messages" class="anchor" href="#get-chat-messages"><span class="octicon octicon-link"></span></a>Get Chat Messages</h3>
+<a id="get-chat-messages" class="anchor" href="#get-chat-messages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Chat Messages</h3>
 
 <pre><code>Messages messages = c.getChatMessages("[diagramId]");
 </code></pre>
 
 <h3>
-<a name="get-folders" class="anchor" href="#get-folders"><span class="octicon octicon-link"></span></a>Get Folders</h3>
+<a id="get-folders" class="anchor" href="#get-folders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Folders</h3>
 
 <pre><code>Folders folders = c.getFolders();
 for (Folder folder : folders.getResult()) {
@@ -127,49 +127,49 @@ for (Folder folder : folders.getResult()) {
 </code></pre>
 
 <h3>
-<a name="get-user" class="anchor" href="#get-user"><span class="octicon octicon-link"></span></a>Get User</h3>
+<a id="get-user" class="anchor" href="#get-user" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get User</h3>
 
 <pre><code>CacooUser user = c.getUser("[username]");
 </code></pre>
 
 <h3>
-<a name="get-account" class="anchor" href="#get-account"><span class="octicon octicon-link"></span></a>Get Account</h3>
+<a id="get-account" class="anchor" href="#get-account" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Account</h3>
 
 <pre><code>CacooUser user = c.getAccount();
 </code></pre>
 
 <h3>
-<a name="get-license" class="anchor" href="#get-license"><span class="octicon octicon-link"></span></a>Get License</h3>
+<a id="get-license" class="anchor" href="#get-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get License</h3>
 
 <pre><code>License license = c.getLicense();
 </code></pre>
 
 <h3>
-<a name="create-diagram" class="anchor" href="#create-diagram"><span class="octicon octicon-link"></span></a>Create Diagram</h3>
+<a id="create-diagram" class="anchor" href="#create-diagram" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Diagram</h3>
 
 <pre><code>Diagram diagram = c.createDiagram(new CreateDiagramRequest("[titlename]"));
 </code></pre>
 
 <h3>
-<a name="copy-diagram" class="anchor" href="#copy-diagram"><span class="octicon octicon-link"></span></a>Copy Diagram</h3>
+<a id="copy-diagram" class="anchor" href="#copy-diagram" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copy Diagram</h3>
 
 <pre><code>Diagram diagram = c.copyDiagram("[diagramId]");
 </code></pre>
 
 <h3>
-<a name="delete-diagram" class="anchor" href="#delete-diagram"><span class="octicon octicon-link"></span></a>Delete Diagram</h3>
+<a id="delete-diagram" class="anchor" href="#delete-diagram" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete Diagram</h3>
 
 <pre><code>c.deleteDiagram("[diagramId]");
 </code></pre>
 
 <h3>
-<a name="post-comment" class="anchor" href="#post-comment"><span class="octicon octicon-link"></span></a>Post Comment</h3>
+<a id="post-comment" class="anchor" href="#post-comment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Post Comment</h3>
 
 <pre><code>c.postComment("[diagramId]", "[comment]");
 </code></pre>
 
 <h3>
-<a name="get-diagram-contents" class="anchor" href="#get-diagram-contents"><span class="octicon octicon-link"></span></a>Get Diagram Contents</h3>
+<a id="get-diagram-contents" class="anchor" href="#get-diagram-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Diagram Contents</h3>
 
 <pre><code>String contents = c.getDiagramContents("[diagramId]");
 </code></pre>
